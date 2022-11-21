@@ -127,15 +127,15 @@ class CMakeBuild(build_ext):
 # The information here can also be placed in setup.cfg - better separation of
 # logic and declaration, and simpler if you include description/version in a file.
 setup(
-    name="cmake_example",
-    version="0.0.1",
-    author="Dean Moldovan",
-    author_email="dean0x7d@gmail.com",
-    description="A test project using pybind11 and CMake",
-    long_description="",
-    ext_modules=[CMakeExtension("cmake_example")],
+    name="Hina",
+    version="1.14",
+    author="Xayah Kasumi",
+    author_email="i@xayah.me",
+    description="HinaPE is not a Physics Engine",
+    long_description="HinaPE is a cross-platform, light and easy-to-use research-oriented physics engine developed after [CMU Scotty3D](https://github.com/CMU-Graphics/Scotty3D), [Fluid Engine Dev](http://github.com/doyubkim/fluid-engine-dev) and [SPlisHSPlasH](https://github.com/InteractiveComputerGraphics/SPlisHSPlasH), consisting Rigidbody Dynamics, Deformables and Fluids.",
+    ext_modules=[CMakeExtension("Hina5")],
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,
     extras_require={"test": ["pytest>=6.0"]},
-    python_requires=">=3.7",
+    python_requires=">=3.10",
 )
