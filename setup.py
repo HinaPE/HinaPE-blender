@@ -127,7 +127,7 @@ class CMakeBuild(build_ext):
 # The information here can also be placed in setup.cfg - better separation of
 # logic and declaration, and simpler if you include description/version in a file.
 setup(
-    name="Hina",
+    name="HinaPE_py",
     version="1.14",
     author="Xayah Kasumi",
     author_email="i@xayah.me",

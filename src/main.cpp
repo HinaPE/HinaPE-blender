@@ -7,9 +7,13 @@ int add(int i, int j) {
     return i + j;
 }
 
+std::string hello_hina(){
+    return "Hello HinaPE";
+}
+
 namespace py = pybind11;
 
-PYBIND11_MODULE(Hina, m) {
+PYBIND11_MODULE(HinaPE_py, m) {
     m.doc() = R"pbdoc(
         Pybind11 example plugin
         -----------------------
@@ -33,6 +37,10 @@ PYBIND11_MODULE(Hina, m) {
         Subtract two numbers
 
         Some other explanation about the subtract function.
+    )pbdoc");
+
+    m.def("hello_hina", &hello_hina, R"pbdoc(
+        Say Hello to Hina~~~
     )pbdoc");
 
 #ifdef VERSION_INFO
