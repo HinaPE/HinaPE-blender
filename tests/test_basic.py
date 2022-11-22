@@ -1,13 +1,20 @@
 import bpy
 
-import HinaPE_py as hn
+import HinaPE_py as hina
 
 bpy.ops.mesh.primitive_cube_add(size=1)
 
 
 def test_main():
-    # assert m.__version__ == "0.0.1"
-    # assert m.add(1, 2) == 3
-    # assert m.subtract(1, 2) == -1
-    hn.add(1, 2)
-    print("Hello Blender")
+    print(hina.add(1, 2))
+    test = hina.Test(12, 2)
+    print(test.add())
+    print(test.add())
+    print(test.add())
+    print(test.add())
+    free_fall = hina.FreeFall()
+    n = 20
+    while n > 0:
+        free_fall.step(0.2)
+        print(free_fall.get_position().y)
+        n = n - 1
